@@ -1,6 +1,8 @@
 #!/bin/sh
 set -euo pipefail
 
+cat ${CONDA_PREFIX}/lib/cmake/YggdrasilRapidJSON/YggdrasilRapidJSON-targets.cmake
+
 examples=("serialize" "yggdrasil" "units")
 
 for example in ${examples[@]}; do
