@@ -1,8 +1,8 @@
 #!/bin/sh
 set -euo pipefail
 
-Python_INCLUDE_DIR="$(python -c 'import sysconfig; print(sysconfig.get_path("include"))')"
-Python_NumPy_INCLUDE_DIR="$(python -c 'import numpy; print(numpy.get_include())')"
+Python_INCLUDE_DIR="$(${PYTHON} -c 'import sysconfig; print(sysconfig.get_path("include"))')"
+Python_NumPy_INCLUDE_DIR="$(${PYTHON} -c 'import numpy; print(numpy.get_include())')"
 
 CMAKE_ARGS+=" -DPython3_EXECUTABLE:PATH=${PYTHON}"
 CMAKE_ARGS+=" -DPython3_INCLUDE_DIR:PATH=${Python_INCLUDE_DIR}"
