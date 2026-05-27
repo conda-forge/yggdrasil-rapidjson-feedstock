@@ -1,5 +1,5 @@
 context:
-  version: "1.1.0.1"
+  version: "1.1.0.2"
 
 package:
   name: yggdrasil-rapidjson
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/cropsinsilico/yggdrasil-rapidjson/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 563134129bfd757067487641070d93f3457395a7f84e47e9d29493886a20a0a3
+  sha256: d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed
 
 build:
-  number: 4
+  number: 0
 
 requirements:
   build:
@@ -38,10 +38,12 @@ tests:
           then:
             - Library/cmake/YggdrasilRapidJSONConfig.cmake
             - Library/cmake/YggdrasilRapidJSONConfigVersion.cmake
+            - Library/cmake/YggdrasilRapidJSONMacros.cmake
         - if: unix
           then:
             - lib/cmake/YggdrasilRapidJSON/YggdrasilRapidJSONConfig.cmake
             - lib/cmake/YggdrasilRapidJSON/YggdrasilRapidJSONConfigVersion.cmake
+            - lib/cmake/YggdrasilRapidJSON/YggdrasilRapidJSONMacros.cmake
       include:
         - yggdrasil_rapidjson/yggdrasil_rapidjson.h
   - script:
