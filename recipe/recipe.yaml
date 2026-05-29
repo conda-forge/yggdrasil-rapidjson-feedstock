@@ -1,5 +1,5 @@
 context:
-  version: "1.1.0.2"
+  version: "1.1.0.3"
 
 package:
   name: yggdrasil-rapidjson
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/cropsinsilico/yggdrasil-rapidjson/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: bff60aeaf965217e018d55a44631ddebd3ed66cdecb30ebcf964f26c71fb90d2
+  sha256: 11ee2d14c0a9f21fe93f8fbcb0792337580f7bdf39fc55bade91cfe899c87ef5
 
 build:
   number: 0
@@ -56,7 +56,7 @@ tests:
         - ${{ stdlib('c') }}
         - ${{ compiler('c') }}
         - ${{ compiler('cxx') }}
-        - cmake >=3.15
+        - cmake >=3.18
         - ninja
     files:
       source:
