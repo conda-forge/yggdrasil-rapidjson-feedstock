@@ -1,5 +1,5 @@
 context:
-  version: "1.1.0.3"
+  version: "1.1.0.4"
 
 package:
   name: yggdrasil-rapidjson
@@ -7,14 +7,16 @@ package:
 
 source:
   url: https://github.com/cropsinsilico/yggdrasil-rapidjson/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 11ee2d14c0a9f21fe93f8fbcb0792337580f7bdf39fc55bade91cfe899c87ef5
+  sha256: 9693a3c8a63658c159121991149f49f25827c9e2d0375dba97493cdb04be7d53
 
 build:
   number: 0
 
 requirements:
+  run_exports:
+    - ${{ pin_subpackage('yggdrasil-rapidjson', exact=True) }}
   build:
-    - cmake >=3.15
+    - cmake >=3.18
     - ninja
     - if: build_platform != host_platform
       then:
