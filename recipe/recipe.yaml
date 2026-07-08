@@ -1,5 +1,5 @@
 context:
-  version: "1.1.0.5"
+  version: "1.1.0.6"
 
 package:
   name: yggdrasil-rapidjson
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/cropsinsilico/yggdrasil-rapidjson/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 9c29aca05fdd9b90afd08255b73360f6a60f1a0d1f82e70af128adc8314f48c7
+  sha256: 5eb7af3a32a316f2a330ae0d33789b76a592d5fc7a984c71b696f97c3e7c514e
 
 build:
   number: 0
