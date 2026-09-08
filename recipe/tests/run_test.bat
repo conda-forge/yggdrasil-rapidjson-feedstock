@@ -10,6 +10,7 @@ for %%x in (serialize yggdrasil units) do (
   cd "!builddir!"
   cmake -G "Ninja" ^
         -D CMAKE_VERBOSE_MAKEFILE:BOOL=ON ^
+        -D "Python3_FIND_ABI=OFF;OFF;OFF;ANY" ^
         ..
   if !errorlevel! neq 0 exit /b !errorlevel!
   cmake --build . --config Debug

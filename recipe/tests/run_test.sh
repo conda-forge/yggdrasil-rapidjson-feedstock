@@ -13,6 +13,7 @@ for example in ${examples[@]}; do
     cd example/${example}/build
     cmake -G "Ninja" \
           -D CMAKE_VERBOSE_MAKEFILE:BOOL=ON \
+          -D Python3_FIND_ABI="ANY;ANY;ANY;ANY" \
           ..
     cmake --build . --config Debug
     
